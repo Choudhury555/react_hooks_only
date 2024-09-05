@@ -1,0 +1,29 @@
+import React, { useState } from "react";
+
+const UseState = () =>{
+    const[count,setCount] = useState(0);
+
+    const increment = () =>{
+        setCount(count+1);
+    }
+
+    const decrement = () =>{
+        if(count===0){
+            setCount(0);
+        }
+        else{
+            setCount(count-1); 
+        }
+    }
+
+
+    return (
+        <div>
+            <button onClick={increment}>+</button>
+            <span> {count} </span>
+            <button onClick={decrement}>-</button>
+        </div>
+    )
+}
+
+export default UseState;
